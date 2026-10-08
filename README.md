@@ -1,4 +1,4 @@
-# Astrbot_plugin_mahjongsoul
+# astrbot_plugin_mahjongsoul
 
 从 [nonebot_plugin_majsoul](https://github.com/bot-ssttkkl/nonebot-plugin-majsoul) 移植的 AstrBot 雀魂插件，支持玩家数据查询、最近对局和 PT 图，并新增可选 AI 锐评、密钥开关、接口诊断与限流处理。
 
@@ -21,12 +21,12 @@
 在 AstrBot 插件管理页面选择从仓库安装，填写：
 
 ```text
-https://github.com/chotohi/Astrbot_plugin_mahjongsoul
+https://github.com/chotohi/astrbot_plugin_mahjongsoul
 ```
 
 安装后打开插件配置，按需要填写牌谱屋和 AI 密钥，保存并重载插件。
 
-也可以从本仓库下载源码 ZIP 后上传安装，或将完整项目放入 `data/plugins/Astrbot_plugin_mahjongsoul/`，保证目录下直接包含 `main.py`、`metadata.yaml` 和 `_conf_schema.json`。依赖见 [requirements.txt](requirements.txt)，不需要安装 NoneBot。
+也可以从本仓库下载源码 ZIP 后上传安装，或将完整项目放入 `data/plugins/astrbot_plugin_mahjongsoul/`，保证目录下直接包含 `main.py`、`metadata.yaml` 和 `_conf_schema.json`。依赖见 [requirements.txt](requirements.txt)，不需要安装 NoneBot。
 
 ## 密钥与功能开关
 

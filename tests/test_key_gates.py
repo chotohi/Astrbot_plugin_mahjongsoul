@@ -7,12 +7,12 @@ import pytest
 from openai import AuthenticationError, PermissionDeniedError
 
 from conftest import Event, collect
-from Astrbot_plugin_mahjongsoul.config import conf
-from Astrbot_plugin_mahjongsoul.errors import QueryError, PaifuyaRateLimitError
-from Astrbot_plugin_mahjongsoul.main import Majsoul
-from Astrbot_plugin_mahjongsoul.paifuya import ai_comment, query_majsoul_pt_plot as plot
-from Astrbot_plugin_mahjongsoul.paifuya.data import api
-from Astrbot_plugin_mahjongsoul.paifuya.data.models.player_num import PlayerNum
+from astrbot_plugin_mahjongsoul.config import conf
+from astrbot_plugin_mahjongsoul.errors import QueryError, PaifuyaRateLimitError
+from astrbot_plugin_mahjongsoul.main import Majsoul
+from astrbot_plugin_mahjongsoul.paifuya import ai_comment, query_majsoul_pt_plot as plot
+from astrbot_plugin_mahjongsoul.paifuya.data import api
+from astrbot_plugin_mahjongsoul.paifuya.data.models.player_num import PlayerNum
 
 
 @pytest.mark.parametrize('key', ['', '   ', 'Bearer ', 'bearer'])
@@ -82,7 +82,7 @@ async def test_pt_service_without_key_also_blocks(monkeypatch):
 
 
 async def test_key_enables_pt_and_regular_info_still_works_without_keys(context, monkeypatch):
-    import Astrbot_plugin_mahjongsoul.paifuya.query_majsoul_info as info
+    import astrbot_plugin_mahjongsoul.paifuya.query_majsoul_info as info
     plugin = Majsoul(context, {})
     plugin.bindings = SimpleNamespace(data={})
     plugin.query_lock = asyncio.Lock()

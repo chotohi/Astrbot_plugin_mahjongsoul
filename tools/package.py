@@ -7,7 +7,7 @@ import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-NAME = 'Astrbot_plugin_mahjongsoul'
+NAME = 'astrbot_plugin_mahjongsoul'
 
 
 def package():

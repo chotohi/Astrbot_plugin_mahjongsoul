@@ -67,8 +67,8 @@ def context():
 @pytest.fixture(autouse=True)
 def reset_api_state(monkeypatch):
     import asyncio
-    from Astrbot_plugin_mahjongsoul.config import Config, conf
-    from Astrbot_plugin_mahjongsoul.paifuya.data import api
+    from astrbot_plugin_mahjongsoul.config import Config, conf
+    from astrbot_plugin_mahjongsoul.paifuya.data import api
     for key, value in Config().model_dump().items():
         monkeypatch.setattr(conf, key, value)
     monkeypatch.setattr(api, '_blocked_until_by_auth', {})

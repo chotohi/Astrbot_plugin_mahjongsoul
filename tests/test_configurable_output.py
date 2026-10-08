@@ -8,11 +8,11 @@ import httpx
 import pytest
 from pydantic import ValidationError
 
-from Astrbot_plugin_mahjongsoul.config import Config, DEFAULT_AI_PROMPT, conf
-from Astrbot_plugin_mahjongsoul.errors import PaifuyaRateLimitError
-from Astrbot_plugin_mahjongsoul.paifuya import ai_comment, query_majsoul_pt_plot as plot
-from Astrbot_plugin_mahjongsoul.paifuya.data.models.player_num import PlayerNum
-from Astrbot_plugin_mahjongsoul.paifuya.data.models.player_info import PlayerLevel
+from astrbot_plugin_mahjongsoul.config import Config, DEFAULT_AI_PROMPT, conf
+from astrbot_plugin_mahjongsoul.errors import PaifuyaRateLimitError
+from astrbot_plugin_mahjongsoul.paifuya import ai_comment, query_majsoul_pt_plot as plot
+from astrbot_plugin_mahjongsoul.paifuya.data.models.player_num import PlayerNum
+from astrbot_plugin_mahjongsoul.paifuya.data.models.player_info import PlayerLevel
 
 
 def test_schema_defaults_and_limit_validation():

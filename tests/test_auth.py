@@ -6,10 +6,10 @@ from unittest.mock import AsyncMock
 import httpx
 import pytest
 from conftest import Event, collect
-from Astrbot_plugin_mahjongsoul.config import conf
-from Astrbot_plugin_mahjongsoul.errors import PaifuyaRateLimitError
-from Astrbot_plugin_mahjongsoul.paifuya.data import api as module
-from Astrbot_plugin_mahjongsoul.paifuya.data.models.player_num import PlayerNum
+from astrbot_plugin_mahjongsoul.config import conf
+from astrbot_plugin_mahjongsoul.errors import PaifuyaRateLimitError
+from astrbot_plugin_mahjongsoul.paifuya.data import api as module
+from astrbot_plugin_mahjongsoul.paifuya.data.models.player_num import PlayerNum
 
 
 @pytest.fixture
@@ -69,7 +69,7 @@ async def test_rejections_stop_retry_and_enforce_cooldown(monkeypatch, no_delay,
 
 @pytest.mark.asyncio
 async def test_pt_auth_failure_does_not_fall_back_anonymously(monkeypatch):
-    from Astrbot_plugin_mahjongsoul.paifuya import query_majsoul_pt_plot as plot
+    from astrbot_plugin_mahjongsoul.paifuya import query_majsoul_pt_plot as plot
     monkeypatch.setattr(conf, 'majsoul_paifuya_api_key', 'dummy-secret')
     player = SimpleNamespace(id=123, nickname='test')
     error = PaifuyaRateLimitError(auth_required=True, auth_sent=True)
@@ -85,7 +85,7 @@ async def test_pt_auth_failure_does_not_fall_back_anonymously(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_status_only_reports_loaded_state(context, monkeypatch):
-    from Astrbot_plugin_mahjongsoul.main import Majsoul
+    from astrbot_plugin_mahjongsoul.main import Majsoul
     monkeypatch.setattr(conf, 'majsoul_paifuya_api_key', 'dummy-secret')
     plugin = Majsoul(context, {})
     result = await collect(plugin.api_status(Event('/雀魂接口状态', admin=True)))

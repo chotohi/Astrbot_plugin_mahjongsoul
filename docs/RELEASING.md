@@ -1,6 +1,6 @@
 # 发布说明
 
-仓库：[chotohi/Astrbot_plugin_mahjongsoul](https://github.com/chotohi/Astrbot_plugin_mahjongsoul)。维护者：**ChoToHi**。
+仓库：[chotohi/astrbot_plugin_mahjongsoul](https://github.com/chotohi/astrbot_plugin_mahjongsoul)。维护者：**ChoToHi**。
 
 ## 仓库简介
 
