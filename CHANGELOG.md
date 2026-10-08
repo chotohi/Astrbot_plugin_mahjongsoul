@@ -1,3 +1,8 @@
+# v1.0.1
+
+- 插件名称统一为 `astrbot_plugin_mahjongsoul`，同步元数据、文档、打包脚本和测试引用。
+- 更新版本号及接口状态命令中的版本显示，业务功能保持不变。
+
 # v1.0.0 — 与 nonebot_plugin_majsoul 的区别
 
 本项目从 [nonebot_plugin_majsoul](https://github.com/bot-ssttkkl/nonebot-plugin-majsoul) 移植，以下仅说明相较于原插件的差异。
