@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "majsoul_query_timeout": {
+      "default": 15.0,
+      "title": "Majsoul Query Timeout",
+      "type": "number"
+    },
+    "majsoul_font": {
+      "default": "",
+      "title": "Majsoul Font",
+      "type": "string"
+    },
+    "majsoul_font_path": {
+      "default": "",
+      "title": "Majsoul Font Path",
+      "type": "string"
+    },
+    "majsoul_send_aggregated_message": {
+      "default": true,
+      "title": "Majsoul Send Aggregated Message",
+      "type": "boolean"
+    },
+    "majsoul_send_link": {
+      "default": false,
+      "title": "Majsoul Send Link",
+      "type": "boolean"
+    },
+    "majsoul_paifuya_api_key": {
+      "default": "",
+      "title": "Majsoul Paifuya Api Key",
+      "type": "string"
+    },
+    "majsoul_pt_max_games": {
+      "default": 2000,
+      "minimum": 1,
+      "title": "Majsoul Pt Max Games",
+      "type": "integer"
+    },
+    "majsoul_ai_comment": {
+      "default": true,
+      "title": "Majsoul Ai Comment",
+      "type": "boolean"
+    },
+    "majsoul_ai_prompt": {
+      "default": "你是一个雀魂猫娘。\n你需要根据玩家的雀魂统计数据进行锐评。\n\n要求：\n- 说话要像猫娘一样\n- 客观分析数据\n- 有节目效果\n- 可以玩梗\n- 不要太长\n- 80字以内\n- 不要回复很多换行符\n- 禁止 Markdown 和富文本\n- 禁止使用 **加粗文本**\n- 不要辱骂群友\n- 重点分析打法问题\n- 要给出问题的解决方案",
+      "title": "Majsoul Ai Prompt",
+      "type": "string"
+    },
+    "majsoul_ai_api_base": {
+      "default": "",
+      "title": "Majsoul Ai Api Base",
+      "type": "string"
+    },
+    "majsoul_ai_api_key": {
+      "default": "",
+      "title": "Majsoul Ai Api Key",
+      "type": "string"
+    },
+    "majsoul_ai_model": {
+      "default": "",
+      "title": "Majsoul Ai Model",
+      "type": "string"
+    },
+    "majsoul_ai_timeout": {
+      "default": 60,
+      "title": "Majsoul Ai Timeout",
+      "type": "integer"
+    }
+  },
+  "title": "Config",
+  "type": "object"
+}

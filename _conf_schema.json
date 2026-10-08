@@ -1,0 +1,63 @@
+{
+  "majsoul_query_timeout": {
+    "description": "查询超时（秒）",
+    "type": "float",
+    "default": 15.0
+  },
+  "majsoul_font_path": {
+    "description": "绘图字体文件路径",
+    "type": "string",
+    "default": ""
+  },
+  "majsoul_paifuya_api_key": {
+    "description": "牌谱屋接口密钥 majsoul_paifuya_api_key",
+    "type": "string",
+    "default": "",
+    "hint": "留空关闭 PT 走向查询和绘图。请求使用 Bearer 认证，与 AI Key 不同。配置后重载，再用 /雀魂接口状态 查看；已加载不代表服务端接受。"
+  },
+  "majsoul_ai_comment": {
+    "description": "启用 AI 锐评",
+    "type": "bool",
+    "default": true,
+    "hint": "开启且配置 AI Key 时才会请求模型；未配置 Key 自动关闭锐评。"
+  },
+  "majsoul_ai_api_base": {
+    "description": "AI API 地址",
+    "type": "string",
+    "default": ""
+  },
+  "majsoul_ai_api_key": {
+    "description": "AI API Key",
+    "type": "string",
+    "default": "",
+    "hint": "留空自动关闭 AI 锐评；填入后保存并重载。请同时设置 API 地址和模型名称。"
+  },
+  "majsoul_ai_model": {
+    "description": "AI 模型名称",
+    "type": "string",
+    "default": ""
+  },
+  "majsoul_ai_timeout": {
+    "description": "AI 请求超时（秒）",
+    "type": "int",
+    "default": 60
+  },
+  "advanced": {
+    "description": "高级配置 JSON",
+    "type": "text",
+    "default": "{}",
+    "hint": "填写合法 JSON 对象，覆盖同名表单配置。没有高级需求时保持 {}。"
+  },
+  "majsoul_pt_max_games": {
+    "description": "PT 图最多场次",
+    "type": "int",
+    "default": 2000,
+    "hint": "正整数。未指定最近N场时按此上限查询；指定场数超过上限时截取最近的记录。大范围绘图可能需要增加查询超时。"
+  },
+  "majsoul_ai_prompt": {
+    "description": "AI 锐评系统提示词",
+    "type": "text",
+    "default": "你是一个雀魂猫娘。\n你需要根据玩家的雀魂统计数据进行锐评。\n\n要求：\n- 说话要像猫娘一样\n- 客观分析数据\n- 有节目效果\n- 可以玩梗\n- 不要太长\n- 80字以内\n- 不要回复很多换行符\n- 禁止 Markdown 和富文本\n- 禁止使用 **加粗文本**\n- 不要辱骂群友\n- 重点分析打法问题\n- 要给出问题的解决方案",
+    "hint": "作为 role=system 发送给 AI，玩家统计作为单独的 user 消息。默认使用猫娘锐评提示词。"
+  }
+}

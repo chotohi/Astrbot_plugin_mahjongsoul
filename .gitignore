@@ -1,0 +1,29 @@
+# Local configuration and credentials
+.env
+.env.*
+*_config.json
+# Runtime data
+/data/
+/logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+# Python and local tools
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.idea/
+.vscode/
+# Build output
+dist/
+build/
+*.egg-info/
+*.zip
+.DS_Store
+Thumbs.db

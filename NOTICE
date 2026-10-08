@@ -1,0 +1,17 @@
+Astrbot_plugin_mahjongsoul
+
+AstrBot port maintained by ChoToHi.
+Port and release preparation: 2026.
+
+Derived from nonebot-plugin-majsoul by ssttkkl and its contributors.
+https://github.com/bot-ssttkkl/nonebot-plugin-majsoul
+Original code remains attributed to its original authors.
+This derived plugin is distributed under GNU AGPL version 3; see LICENSE.
+See UPSTREAM.md for provenance and changes.
+
+Bundled font: paifuya/NotoSansCJK-Regular.otf
+Copyright © 2014 Adobe Systems Incorporated. All Rights Reserved.
+Version 1.000; PS 1; hotconv 1.0.78; makeotf.lib2.5.61930
+The embedded font metadata specifies the Apache License, Version 2.0.
+See licenses/Apache-2.0.txt. The font is included without modification.
+The font's separate license is not replaced by the plugin's AGPL license.
