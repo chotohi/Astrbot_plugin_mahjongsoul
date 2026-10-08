@@ -129,11 +129,8 @@ PT 图超过单次容量时分批取数，每次最多 500 场，所有分页继
 
 ## 使用说明与限制
 
-本版已移除牌谱下载命令、账号登录及账号密码配置。旧配置中的下载账号字段不再读取；原有昵称绑定和用户数据不会因此删除。
+本项目已移除牌谱下载命令、账号登录及账号密码配置。
 
-- 绑定表保存在 `data/plugin_data/astrbot_plugin_majsoul/bindings.json`，以平台实例和用户 ID 区分。旧 NoneBot 绑定不会自动导入。
-- 个人配置由 AstrBot 保存到 `data/config/Astrbot_plugin_mahjongsoul_config.json`。发布代码时不要包含此文件。
-- 最近对局输出文字列表；未复刻上游合并转发样式。`majsoul_send_aggregated_message`、`majsoul_font` 为历史兼容字段，不作为本版有效开关；字体用 `majsoul_font_path`。
 - 数据来自牌谱屋，查询覆盖范围和可用性由数据源决定。没有找到数据不等于账号没有玩过雀魂。
 - 429 且带 Retry-After 时按服务端提示等待；填过 Key 仍被拒绝，需核实密钥及接口权限。插件不会以匿名查询或更换镜像绕过授权拒绝。
 - AI 功能启用后会将统计文本发送到你配置的模型服务。AI 锐评失败不会撤回已经发出的统计结果。
