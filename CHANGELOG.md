@@ -1,7 +1,6 @@
 # v1.0.1
 
-- 插件名称统一为 `astrbot_plugin_mahjongsoul`，同步元数据、文档、打包脚本和测试引用。
-- 更新版本号及接口状态命令中的版本显示，业务功能保持不变。
+清理 requirements.txt 中的 loguru 残留依赖并统一插件数据目录命名
 
 # v1.0.0 — 与 nonebot_plugin_majsoul 的区别
 

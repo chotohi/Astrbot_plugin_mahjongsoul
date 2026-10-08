@@ -1,5 +1,6 @@
 import ast
 import asyncio
+import json
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -61,3 +62,28 @@ async def test_native_lifecycle_starts_and_stops_prober(context, monkeypatch):
     await plugin.terminate()
     start.assert_awaited_once()
     close.assert_awaited_once()
+
+
+@pytest.mark.parametrize('existing', [None, {}, {'test:101': 'current-player'}])
+async def test_binding_directory_upgrade_preserves_data(context, monkeypatch, tmp_path, existing):
+    from astrbot_plugin_mahjongsoul.main import Majsoul
+    legacy = tmp_path / 'astrbot_plugin_majsoul' / 'bindings.json'
+    legacy.parent.mkdir()
+    old_bindings = {'test:101': 'legacy-player'}
+    legacy.write_text(json.dumps(old_bindings), encoding='utf-8')
+    current = tmp_path / 'astrbot_plugin_mahjongsoul' / 'bindings.json'
+    if existing is not None:
+        current.parent.mkdir()
+        current.write_text(json.dumps(existing), encoding='utf-8')
+    monkeypatch.setattr(native.prober, 'start', AsyncMock())
+    monkeypatch.setattr(native.prober, 'close', AsyncMock())
+    plugin = Majsoul(context, {})
+    await plugin.initialize()
+    try:
+        expected = old_bindings if existing is None else existing
+        assert plugin.bindings.path == current
+        assert plugin.bindings.data == expected
+        assert json.loads(current.read_text('utf-8')) == expected
+        assert json.loads(legacy.read_text('utf-8')) == old_bindings
+    finally:
+        await plugin.terminate()

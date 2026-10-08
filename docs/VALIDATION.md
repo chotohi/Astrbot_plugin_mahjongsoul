@@ -1,6 +1,6 @@
 # v1.0.1 验证说明
 
-在 Windows / Python 3.14.7 / AstrBot 4.28.2 环境运行 `python -m pytest tests -q`：42 项测试全部通过，10 条弃用警告。`python tools/package.py` 打包校验通过，安装包名称为 `astrbot_plugin_mahjongsoul_v1.0.1.zip`。本次修改统一插件名称及版本显示，不改变业务功能。
+在 Windows / Python 3.14.7 / AstrBot 4.28.2 环境运行 `python -m pytest tests -q`：45 项测试全部通过，10 条弃用警告。`python tools/package.py` 打包校验通过，安装包名称为 `astrbot_plugin_mahjongsoul_v1.0.1.zip`。本次修改统一插件名称、版本显示及数据目录；新增 3 项升级测试，验证旧绑定迁移、新绑定优先及空绑定文件不被覆盖。
 
 以下保留 v1.0.0 的历史验证记录。
 

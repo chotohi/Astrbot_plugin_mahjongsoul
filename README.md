@@ -26,6 +26,8 @@ https://github.com/chotohi/astrbot_plugin_mahjongsoul
 
 安装后打开插件配置，按需要填写牌谱屋和 AI 密钥，保存并重载插件。
 
+账号绑定保存在 `data/plugin_data/astrbot_plugin_mahjongsoul/`。升级时，如果新目录尚无绑定文件，会自动复制旧目录 `astrbot_plugin_majsoul` 中的绑定；已有的新目录绑定优先，旧文件保留。
+
 也可以从本仓库下载源码 ZIP 后上传安装，或将完整项目放入 `data/plugins/astrbot_plugin_mahjongsoul/`，保证目录下直接包含 `main.py`、`metadata.yaml` 和 `_conf_schema.json`。依赖见 [requirements.txt](requirements.txt)，不需要安装 NoneBot。
 
 ## 密钥与功能开关

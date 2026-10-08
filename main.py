@@ -11,7 +11,14 @@ class Majsoul(NativePlugin, Star):
     async def initialize(self):
         from .config import Config, conf
         conf.__dict__.update(Config(**self.options).__dict__)
-        self.bindings = JsonStore(data_dir('astrbot_plugin_majsoul') / 'bindings.json')
+        bindings_dir = data_dir('astrbot_plugin_mahjongsoul')
+        bindings_path = bindings_dir / 'bindings.json'
+        self.bindings = JsonStore(bindings_path)
+        # Preserve existing bindings when upgrading from the old data directory.
+        legacy_path = bindings_dir.parent / 'astrbot_plugin_majsoul' / 'bindings.json'
+        if not bindings_path.exists() and legacy_path.is_file():
+            self.bindings.data = JsonStore(legacy_path).data
+            self.bindings.save()
         self.query_lock = asyncio.Lock()
         from .paifuya.data.api import paifuya_api, prober
         self.api = paifuya_api
