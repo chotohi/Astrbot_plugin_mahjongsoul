@@ -40,6 +40,7 @@ https://github.com/chotohi/Astrbot_plugin_mahjongsoul
 “开启”表示允许发起请求，不代表密钥已被服务端接受。AI 还需正确的接口地址和模型名；普通信息查询同样受牌谱屋服务可用性及访问限制影响。AI Key 与牌谱屋 Key 不能混用。空白字符串及只有 Bearer 前缀的配置按未填写处理。
 
 填入密钥后保存并重载插件。运行时自动关闭功能不会改写你的配置开关；补齐 Key 并重载后可恢复。关闭 `majsoul_ai_comment` 则始终不调用 AI，即使已填 Key。
+另外，牌铺屋密钥需要自行申请。
 
 ## 命令
 
